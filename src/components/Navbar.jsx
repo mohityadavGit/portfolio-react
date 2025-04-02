@@ -1,5 +1,5 @@
 import { useState } from "react";
-import image from "../assets/image.png";
+import logo from "../assets/logo.png";
 import { CiMenuBurger } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-scroll";
@@ -40,11 +40,16 @@ function Navbar() {
         <div className="flex items-center space-x-4">
           <div className="relative group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur opacity-0 group-hover:opacity-75 transition duration-500"></div>
-            <img
-              src={image}
-              alt="Profile"
-              className="relative w-12 h-12 rounded-full border-2 border-transparent group-hover:border-blue-500 transition-all duration-300 shadow-lg"
-            />
+            <a
+              href="https://drive.google.com/file/d/1e-OCJgLRyr_9bWekz8z2EUxlY9eGE7Wg/view?usp=sharing"
+              target="_blank"
+            >
+              <img
+                src={logo}
+                alt="Profile"
+                className="relative w-12 h-12 rounded-full border-2 border-transparent group-hover:border-blue-500 transition-all duration-300 shadow-lg hover:animate-spin"
+              />
+            </a>
           </div>
 
           <div className="ml-3">
@@ -95,7 +100,7 @@ function Navbar() {
             ))}
             <li>
               <a
-                href="https://drive.google.com/drive/u/0/recent"
+                href="https://drive.google.com/file/d/1e-OCJgLRyr_9bWekz8z2EUxlY9eGE7Wg/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative inline-flex items-center px-6 py-2 rounded-full text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 hover:scale-105 transform"

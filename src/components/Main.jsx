@@ -168,17 +168,17 @@ function Main() {
         <motion.div
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          className="relative w-full md:w-[calc(100vw-20rem)] flex justify-center items-center order-1 md:order-2"
+          className="relative w-full md:w-[calc(100vw-20rem)] flex justify-center items-center order-1 md:order-2 mt-14"
         >
           <div className="relative w-48 md:w-64 aspect-square">
             {/* Rainbow gradient ring animation */}
             <div className="absolute inset-0 bg-gradient-to-r from-violet-600 via-blue-500 to-emerald-400 rounded-full animate-spin-slow blur-md" />
 
             {/* Glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full blur-2xl opacity-20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full blur-2xl opacity-20 " />
 
             {/* Image container with effects */}
-            <div className="absolute inset-[3px] rounded-full bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-1">
+            <div className="absolute inset-[3px] rounded-full bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-1 ">
               <div className="relative w-full h-full rounded-full overflow-hidden">
                 <img
                   src={image}
