@@ -1,0 +1,45 @@
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scale(0);
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%) scale(0);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(90%) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(10%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0) scale(0);
+  }
+}
+
+.stars-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.star {
+  opacity: 0;
+  filter: blur(0.5px);
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+}
