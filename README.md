@@ -28,8 +28,8 @@ npm run dev
 ```
 
 ## 📸 Screenshots  
-   [Portfolio Screenshot1](./public/Screenshot1.png)  
-    [Portfolio Screenshot2](./public/Screenshot2.png)
+   ![Portfolio Screenshot1](./public/Screenshot1.png)  
+    ![Portfolio Screenshot2](./public/Screenshot2.png)
 
 ## 📬 Contact  
 If you like my work or want to collaborate, feel free to reach out:  
