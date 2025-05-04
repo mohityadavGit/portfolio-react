@@ -41,7 +41,7 @@ function Navbar() {
           <div className="relative group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur opacity-0 group-hover:opacity-75 transition duration-500"></div>
             <a
-              href="https://drive.google.com/file/d/1e-OCJgLRyr_9bWekz8z2EUxlY9eGE7Wg/view?usp=sharing"
+              href="https://drive.google.com/drive/folders/1WR80n5E0q4ZNX8z1N3LhyWob6R5eEwa6?usp=sharing"
               target="_blank"
             >
               <img
@@ -100,7 +100,7 @@ function Navbar() {
             ))}
             <li>
               <a
-                href="https://drive.google.com/file/d/1e-OCJgLRyr_9bWekz8z2EUxlY9eGE7Wg/view?usp=sharing"
+                href="https://drive.google.com/drive/folders/1WR80n5E0q4ZNX8z1N3LhyWob6R5eEwa6?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative inline-flex items-center px-6 py-2 rounded-full text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 hover:scale-105 transform"

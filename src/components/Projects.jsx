@@ -8,30 +8,16 @@ import { TbBrandNextjs } from "react-icons/tb";
 function Projects() {
   const projects = [
     {
-      title: "Myntra Clone",
+      title: "HomeHive – Full Stack Rental Platform",
       description:
-        "A fully functional clone of Myntra's e-commerce platform with responsive design and interactive user interface. Implemented features like product listing, filtering, and cart functionality.",
-      technologies: [
-        { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
-        { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
-        {
-          name: "JavaScript",
-          icon: <IoLogoJavascript className="text-yellow-400" />,
-        },
-      ],
-      link: "#", // Add your project link here
-    },
-    {
-      title: "Airbnb Full Stack",
-      description:
-        "Complete full-stack Airbnb clone with features like property listing, booking system, and user authentication. Built with MVC architecture and RESTful API design.",
+        "Complete full-stack rental platform inspired by Airbnb, with features like property listing, booking system, and user authentication. Built using MVC architecture and RESTful APIs.",
       technologies: [
         { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
-        { name: "Express", icon: <SiExpress className="text-white" /> },
+        { name: "Express.js", icon: <SiExpress className="text-white" /> },
         { name: "Node.js", icon: <FaNode className="text-green-600" /> },
         { name: "EJS", icon: "EJS" },
       ],
-      link: "#", // Add your project link here
+      link: "https://homehive-app-production.up.railway.app/",
     },
     {
       title: "Portfolio Website",
@@ -45,7 +31,21 @@ function Projects() {
           icon: <IoLogoJavascript className="text-yellow-400" />,
         },
       ],
-      link: "#", // Add your project link here
+      link: "https://portfolio-react-beryl.vercel.app/",
+    },
+    {
+      title: "Myntra Clone",
+      description:
+        "A fully functional clone of Myntra's e-commerce platform with responsive design and interactive user interface. Implemented features like product listing, filtering, and cart functionality.",
+      technologies: [
+        { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
+        { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
+        {
+          name: "JavaScript",
+          icon: <IoLogoJavascript className="text-yellow-400" />,
+        },
+      ],
+      link: "https://myntra-clone-beryl.vercel.app/",
     },
   ];
 
@@ -87,6 +87,17 @@ function Projects() {
                     <p className="text-gray-400 mb-6 leading-relaxed">
                       {project.description}
                     </p>
+
+                    {/* 🔗 Live Demo Button */}
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block mt-2 px-5 py-2 border border-green-500 hover:border-blue-500 text-blue-400 rounded-full text-sm font-semibold
+                        hover:bg-blue-500 hover:text-white transition duration-300 animate-pulse "
+                    >
+                      🔗 Live Demo
+                    </a>
                   </div>
 
                   {/* Technologies */}
@@ -107,7 +118,7 @@ function Projects() {
                 </div>
 
                 {/* Hover Effect Gradient */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               </div>
             </motion.div>
           ))}
