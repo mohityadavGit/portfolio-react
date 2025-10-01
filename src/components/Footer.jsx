@@ -44,28 +44,66 @@ function Footer() {
         <div className="w-full border-t border-gray-800 my-8" />
 
         {/* Bottom Section */}
-        <div className="flex flex-col items-center">
-          <p className="text-gray-400 text-sm mb-2">
-            Built with <span className="text-red-500">❤</span> by Mohit Yadav
+        <div className="flex flex-col items-center text-center space-y-3">
+          <p className="text-gray-400 text-sm">
+            Built with <span className="text-red-500">❤</span> by Mohit Yadav{" "}
+            <span role="img" aria-label="India Flag">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
+                alt="India Flag"
+                className="inline w-5 h-3 ml-1"
+              />
+            </span>
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4">
-            <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} All Rights Reserved
-            </p>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                Terms of Service
-              </a>
-            </div>
+
+          <p className="text-green-400 text-sm italic">
+            Proudly Made in India{" "}
+            <span role="img" aria-label="India Flag">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
+                alt="India Flag"
+                className="inline w-5 h-3 ml-1"
+              />
+            </span>
+          </p>
+
+          <div className="flex items-center justify-center space-x-2 text-gray-400 text-sm">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5s-3 1.343-3 3 1.343 3 3 3z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 22s8-4.5 8-10a8 8 0 10-16 0c0 5.5 8 10 8 10z"
+              />
+            </svg>
+            <span>India</span>
+          </div>
+
+          <p className="text-gray-400 text-xs italic max-w-md">
+            “Arise, awake and stop not till the goal is reached.” — Swami
+            Vivekananda
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-6 text-gray-500 text-sm">
+            <p>© {new Date().getFullYear()} All Rights Reserved</p>
+            <a href="#" className="hover:text-white transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-white transition-colors">
+              Terms of Service
+            </a>
           </div>
         </div>
       </div>

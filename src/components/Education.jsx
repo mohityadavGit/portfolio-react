@@ -25,7 +25,7 @@ function Education() {
     {
       id: 2,
       degree: "Bachelor of Technology",
-      field: "Computer Science & Engineering (Artificial Intelogence)",
+      field: "Computer Science & Engineering (Artificial Intelligence)",
       school: "University of Lucknow  ",
       year: "2022 - Still",
       score: "9.25 CGPA",

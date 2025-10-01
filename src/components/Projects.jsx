@@ -4,6 +4,7 @@ import { FaHtml5, FaCss3Alt, FaNode, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiMongodb, SiExpress, SiTailwindcss } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
+import { SiSocketdotio } from "react-icons/si";
 
 function Projects() {
   const projects = [
@@ -18,6 +19,22 @@ function Projects() {
         { name: "EJS", icon: "EJS" },
       ],
       link: "https://homehive-app-production.up.railway.app/",
+    },
+    {
+      title: "Real-Time Chat App – Full-Stack Messaging Platform",
+      description:
+        "Developed a real-time chat application using React, Node.js, Express, MongoDB, and Socket.IO. Enabled instant messaging via WebSocket communication and designed REST APIs for user and chat handling. Built a dynamic and responsive UI with React and deployed using Vercel and Railway.",
+      technologies: [
+        { name: "React", icon: <FaReact className="text-cyan-400" /> },
+        { name: "Node.js", icon: <FaNode className="text-green-600" /> },
+        { name: "Express.js", icon: <SiExpress className="text-white" /> },
+        { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+        {
+          name: "Socket.IO",
+          icon: <SiSocketdotio className="text-gray-300" />,
+        },
+      ],
+      link: "https://sandesh-sarthi.vercel.app/",
     },
     {
       title: "Portfolio Website",
