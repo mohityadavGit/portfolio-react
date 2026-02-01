@@ -1,114 +1,141 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGraduationCap } from "react-icons/fa";
+import { FaGraduationCap, FaExternalLinkAlt } from "react-icons/fa";
 
 function Education() {
   const education = [
     {
-      id: 5,
-      degree: "10th Standard",
-      // field: "Science (PCM)",
-      school: "Ravi Indian Public School, Jhunjhunu ,Rajasthan",
-      year: "2019 - 2020",
-      score: "84.00%",
-    },
-    {
-      id: 1,
-      degree: "12th Standard",
-      field: "Science (PCM)",
-      school: "Ravi Indian Public School, Jhunjhunu ,Rajasthan",
-      year: "2021 - 2022",
-      score: "88.4%",
-      description:
-        "Completed senior secondary with focus on Physics, Chemistry, and Mathematics.",
-    },
-    {
-      id: 2,
       degree: "Bachelor of Technology",
       field: "Computer Science & Engineering (Artificial Intelligence)",
-      school: "University of Lucknow  ",
-      year: "2022 - Still",
+      institute: "University of Lucknow",
+      year: "2022 – Present",
       score: "9.25 CGPA",
+      achievements:
+        "Consistently maintained strong academic performance with active involvement in technical and development projects.",
+      coursework: [
+        "Data Structures & Algorithms",
+        "Database Management Systems",
+        "Operating Systems",
+        "Object-Oriented Programming",
+        "Web Technologies",
+        "Software Engineering",
+      ],
+      projectsLink: "#projects",
       description:
-        "Currently pursuing B.Tech in Computer Science with focus on Full Stack Development and Data Structures.",
+        "Focused on Full Stack Development, DevOps fundamentals, scalable system design, and modern web technologies.",
+      highlight: true,
+    },
+    {
+      degree: "Senior Secondary (12th)",
+      field: "Science (PCM)",
+      institute: "Ravi Indian Public School, Jhunjhunu, Rajasthan",
+      year: "2021 – 2022",
+      score: "88.4%",
+    },
+    {
+      degree: "Secondary (10th)",
+      field: "",
+      institute: "Ravi Indian Public School, Jhunjhunu, Rajasthan",
+      year: "2019 – 2020",
+      score: "84%",
     },
   ];
 
   return (
-    <div
+    <section
       id="education"
-      className="min-h-screen bg-gradient-to-b from-black to-gray-900 py-16 px-4 overflow-x-hidden"
+      className="min-h-screen bg-gradient-to-b from-black to-gray-900 py-20 px-6"
     >
-      <div className="max-w-6xl mx-auto">
-        {/* Section Title */}
+      <div className="max-w-5xl mx-auto">
+        {/* Title */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
         >
-          Education Journey
+          Education
         </motion.h2>
 
-        {/* Education Timeline */}
-        <div className="relative">
-          {/* Timeline Line */}
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500 rounded-full" />
+        {/* Timeline */}
+        <div className="relative border-l border-gray-700 pl-10 space-y-12">
+          {education.map((edu, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={`relative border rounded-xl p-6 ${
+                edu.highlight
+                  ? "bg-gray-800/60 border-blue-500/50"
+                  : "bg-gray-800/40 border-gray-700"
+              }`}
+            >
+              {/* Icon */}
+              <span className="absolute -left-[22px] top-6 w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+                <FaGraduationCap className="text-white" />
+              </span>
 
-          {/* Remove min-width container and update card sizes */}
-          <div className="w-full">
-            {education.map((edu, index) => (
-              <motion.div
-                key={edu.id}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className={`flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center mb-8 ${
-                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
-              >
-                {/* Timeline Point */}
-                <div className="absolute left-0 md:left-1/2 transform translate-x-4 md:-translate-x-1/2 z-10">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 p-1 opacity-{0.5px}">
-                    <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center">
-                      <FaGraduationCap className="text-blue-400 text-xl " />
-                    </div>
-                  </div>
+              {/* Degree */}
+              <h3 className="text-xl font-semibold text-white">{edu.degree}</h3>
+
+              {/* Field */}
+              {edu.field && (
+                <p className="text-blue-400 text-sm mt-1">{edu.field}</p>
+              )}
+
+              {/* Institute */}
+              <p className="text-gray-300 mt-2">{edu.institute}</p>
+
+              {/* Meta */}
+              <div className="flex flex-wrap gap-4 mt-3 text-sm">
+                <span className="text-gray-400">{edu.year}</span>
+                <span className="text-green-400 bg-green-400/10 px-3 py-1 rounded-full">
+                  {edu.score}
+                </span>
+              </div>
+
+              {/* Description */}
+              {edu.description && (
+                <p className="mt-3 text-gray-400 text-sm">{edu.description}</p>
+              )}
+
+              {/* Achievements */}
+              {edu.achievements && (
+                <p className="mt-3 text-green-400 text-sm">
+                  🏆 {edu.achievements}
+                </p>
+              )}
+
+              {/* Coursework */}
+              {edu.coursework && (
+                <div className="mt-4">
+                  <p className="text-blue-400 text-sm font-semibold mb-2">
+                    Relevant Coursework
+                  </p>
+                  <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-gray-400 text-xs">
+                    {edu.coursework.map((course, i) => (
+                      <li key={i}>• {course}</li>
+                    ))}
+                  </ul>
                 </div>
+              )}
 
-                {/* Update Education Card */}
-                <div
-                  className={`w-[calc(100%-4rem)] sm:w-72 md:w-5/12 ml-16 md:ml-0 ${
-                    index % 2 === 0 ? "md:pr-8" : "md:pl-8"
-                  }`}
+              {/* Projects Link */}
+              {edu.projectsLink && (
+                <a
+                  href={edu.projectsLink}
+                  className="inline-flex items-center gap-2 mt-4 text-sm text-purple-400 hover:text-purple-300 transition"
                 >
-                  <div className="bg-gray-800/50 backdrop-blur-sm p-3 sm:p-4 rounded-xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 group hover:shadow-lg hover:shadow-blue-500/10">
-                    <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
-                      {edu.degree}
-                    </h3>
-                    <p className="text-blue-400 font-medium mb-2 text-sm sm:text-base">
-                      {edu.field}
-                    </p>
-                    <p className="text-gray-300 mb-2 text-sm sm:text-base">
-                      {edu.school}
-                    </p>
-                    <div className="flex justify-between items-center mb-3">
-                      <span className="text-gray-400 text-sm">{edu.year}</span>
-                      <span className="text-green-400 font-medium bg-green-400/10 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm">
-                        {edu.score}
-                      </span>
-                    </div>
-                    <p className="text-gray-400 text-xs sm:text-sm">
-                      {edu.description}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                  View Related Projects{" "}
+                  <FaExternalLinkAlt className="text-xs" />
+                </a>
+              )}
+            </motion.div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
